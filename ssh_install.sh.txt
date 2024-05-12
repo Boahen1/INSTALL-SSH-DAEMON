@@ -1,0 +1,16 @@
+ssh_install.sh
+
+#!/bin/bash
+#Define the package name
+package_name="sshd"
+#Check if the package is installed
+if 
+rpm -qa sshd &>/dev/null; then
+echo "sshd is installed"
+else
+#insatall sshd package
+
+echo "installing sshd..."
+sudo dnf install sshd -y
+
+fi
